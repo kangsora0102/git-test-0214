@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /*초기화*/
+        body{
+            margin:0;
+            padding:0;
+        }
+        
+        /*body내에있는 첫번째 h1태그*/
+        body>h1:first-child{
+            text-align: center;
+        }
+
+        /*컨텐츠*/
+        .container{
+            width:600px;
+            margin:0 auto;
+        }
+        table{
+            border-collapse: collapse; /*border가 겹치면 2중으로 되서 두꺼워지기때문에 셀 테두리를 합칠것인지 설정하는 속성*/
+        }
+        tr{
+            border-bottom: 1px solid #DDDDDD;
+            height: 40px;
+        }
+
+        /*input type=number의 오른쪽에 있는 화살표 위아래 제거*/
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입 폼</h1>
+    <div class="container">
+        <form method="post">
+            <table>
+                <colgroup>
+                    <col style="width:130px;"/>
+                    <col/>
+                </colgroup>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="userid" minlength="5" maxlength="12"/> <input type="button" value="아이디중복검사"/></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="userpwd" minlength="5" maxlength="12"/></td>
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td><input type="password" name="userpwdcrm" minlength="5" maxlength="12"/></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="username" minlength="2" maxlength="8"/></td>
+                </tr>
+                <tr>
+                    <td>연락처</td>
+                    <td>
+                        <select name="phone1">
+                            <option>010</option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                            <option>019</option>
+                        </select> - <input type="number" style="width:90px;" min="1000" max="9999"/> - <input type="number" style="width:90px;" min="1000" max="9999"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="email" name="email"/></td>
+                </tr>
+                <tr>
+                    <td>우편번호</td>
+                    <td><input type="text"/> <input type="button" value="우편번호찾기"/></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td><input type="text" name="addr" size="50"/></td>
+                </tr>
+                <tr>
+                    <td>상세주소</td>
+                    <td><input type="text" name="detailaddr"/></td>
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td>
+                        <input type="checkbox" value="야구" name="hobby"/>야구
+                        <input type="checkbox" value="바이크" name="hobby"/>바이크
+                        <input type="checkbox" value="등산" name="hobby"/>등산
+                        <input type="checkbox" value="쇼핑" name="hobby"/>쇼핑
+                        <input type="checkbox" value="자전거" name="hobby"/>자전거
+                        <input type="checkbox" value="걷기" name="hobby"/>걷기
+                        <input type="checkbox" value="영화감상" name="hobby"/>영화감상
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="회원가입하기"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

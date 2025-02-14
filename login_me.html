@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        h1{text-align: center;}
+
+        div{text-align: center;}
+
+        .wh{
+            width: 530px;
+            height: 60px;
+            padding-left: 30px;
+        }
+
+        #i1{
+            margin-top:50px;
+            margin-bottom:10px;
+        }
+
+        #i2{
+            margin-bottom:30px;
+        }
+        
+        form{
+            width: 700px;
+            margin: 0px auto;
+        }
+
+        #s1{
+            width: 566px;
+            height: 66px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+        }
+
+        #b1{
+            margin-top:50px;
+            margin-left:66px;
+        }
+
+        #a1{
+            margin-left: 340px;
+        }
+
+        A:link, A:visited{ 
+            color:black;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>로그인 폼</h1>
+    <form method="post" action="#">
+        <div>
+            <input type="text" name="userid" placeholder="아이디(5~15자의 영문, 숫자만 가능)" class="wh" id="i1"/><br/>
+            <input type="password" name="userpwd" placeholder="비밀번호(입력 실패 5회 시 잠금 처리)" class="wh" id="i2"/><br/>
+            <input type="submit" value="로그인" id="s1"/><br/>
+        </div>
+        <input type="button" value="회원가입" id="b1"/><a href="#" id="a1">아이디/비밀번호 찾기</a>
+    </form>
+</body>
+
+</html>

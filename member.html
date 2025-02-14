@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul, li{
+            margin:0;
+            padding:0;
+            list-style-type:none;
+        }
+        .container{ /*전체박스크기와 가운데정렬*/
+            width:700px;
+            margin:0 auto;
+            overflow:auto;
+        }
+        .container>h1{
+            text-align:center;
+            margin:100px 0 50px;
+        }
+        #frm li{
+            float:left;
+            width:80%; /*전체를 80%로 했다가 홀수번째만 20%로 줬기때문에 짝수번째는 생략해도 된다.*/
+            line-height:40px;
+            border-bottom: 1px solid #ddd;
+        }
+        #frm li:nth-child(2n+1){ /*홀수번째*/
+            width:20%;
+        }
+        /* #frm li:nth-child(2n){ 짝수번째
+            width:80%;
+        } */
+        #tel2, #tel3, #zipcode{
+            width:50px;
+        }
+        #frm li:last-of-type{ /*맨 하단 회원가입하기버튼과 다시쓰기 버튼을 가운데정렬*/
+            width:100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>회원가입폼</h1>
+        <form method="post" action="memberOk.jsp" id="frm">
+            <ul>
+                <li>아이디</li>
+                <li>
+                    <input type="text" name="userid" id="userid"/>
+                    <input type="button" value="아이디중복검사"/>
+                </li>
+                <li>비밀번호</li>
+                <li><input type="password" name="userpwd" id="userpwd"/></li>
+                <li>비밀번호확인</li>
+                <li><input type="password" name="pwd2" id="pwd2"/></li>
+                <li>이름</li>
+                <li><input type="text" name="username" id="username"/></li>
+                <li>연락처</li>
+                <li>
+                    <select name="tel1">
+                        <option>010</option>
+                        <option>02</option>
+                        <option>031</option>
+                        <option>032</option>
+                        <option>041</option>
+                        <option>051</option>
+                    </select>
+                    -
+                    <input type="text" name="tel2" id="tel2"/>
+                    -
+                    <input type="text" name="tel3" id="tel3"/>
+                </li>
+                <li>이메일</li>
+                <li><input type="email" name="email" id="email"/></li>
+                <li>우편번호</li>
+                <li>
+                    <input type="text" name="zipcode" id="zipcode"/>
+                    <input type="button" value="우편번호찾기"/>
+                </li>
+                <li>주소</li>
+                <li><input type="text" name="addr" id="addr"/></li>
+                <li>상세주소</li>
+                <li><input type="text" name="addrDetail" id="addrDetail"/></li>
+                <li>취미</li>
+                <li>
+                    <input type="checkbox" name="hobby" value="야구"/> 야구
+                    <input type="checkbox" name="hobby" value="축구"/> 축구
+                    <input type="checkbox" name="hobby" value="바이크"/> 바이크
+                    <input type="checkbox" name="hobby" value="쇼핑"/> 쇼핑
+                    <input type="checkbox" name="hobby" value="자전거"/> 자전거
+                    <input type="checkbox" name="hobby" value="걷기"/> 걷기
+                    <input type="checkbox" name="hobby" value="영화감상"/> 영화감상
+                </li>
+                <li>
+                    <!--밑 두줄 회원가입하기 버튼 = 같은기능-->
+                    <input type="submit" value="회원가입하기"/>
+                    <button>회원가입하기</button>
+                    <input type="reset" value="다시쓰기"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

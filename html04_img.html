@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+</head>
+<body>
+    <h1 title="title속성 테스트중~~~">이미지 연습하기</h1>
+    <pre>
+        ./ : 현재 폴더
+        ../ : 상위 폴더
+
+        alt : 이미지가 없으면 대신 표시할 문자
+        width, height : 폭과 높이 px, % (px는 이미지 크기 고정, %는 창크기에 따라 이미지 크기 변함)
+        title : 풍선도움말 (마우스 커서 올리면 확인가능)
+    </pre>
+    <img src="../img/02.jpeg" alt="이미지대신에 표시되는 문자" width="100" height="100"/><img src="../img/03.jpeg" width="25%"/><!-- img를 붙여서 쓰면 여백이 쓰이지 않는다.-->
+    <br />
+    <img src="../img/02.jpeg" alt="이미지대신에 표시되는 문자" width="200" height="200"/> <img src="../img/03.jpeg" width="50%"/><!-- img를 띄어서 쓰면 여백이 쓰인다. -->
+
+    <table border="1" width="500">
+        <tr>
+            <td><img src="../img/04.jpeg" width="50%" title="이미지에 풍선도움말"/></td><!-- 테이블 사이즈가 변하지않는이상 이미지 크기는 %d여도도 변하지 않는다. -->
+        </tr>
+
+    </table>
+
+
+</body>
+</html>

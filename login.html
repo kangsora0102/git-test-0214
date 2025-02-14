@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /*서울 시청 로그인폼*/
+
+        .container{
+            width: 500px;
+            margin: 100px auto; /* 100px auto 100px auto 와 동일하다 top과 bottom 100px 여백을 둔다.*/
+            /*background-color: rgb(202, 228, 252); 확인용*/
+            overflow: auto;
+        }
+
+        #title{
+            text-align: center;
+        }
+
+        .in-box, .log-btn{
+            padding: 20px;
+            margin: 10px 0px;
+        }
+
+        .in-box{
+            width: 456px;
+        }
+
+        .log-btn{
+            width: 100%;
+            background-color: blue;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .left, .right{
+            float: left;
+            width: 50%;
+            margin: 30px 0;
+        }
+
+        .right{
+            text-align: right;
+        }
+
+        a:link, a:visited, a:hover{
+            color: #000;
+            text-decoration: none; /* 밑줄 제거 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">로그인 폼</h1>
+        <form method="post" action="#">
+            <input type="text" name="userid" class="in-box" placeholder="아이디(5~15자의 영문, 숫자만 가능)" minlength="5" maxlength="15"/>
+            <input type="password" name="userpwd" class="in-box" placeholder="비밀번호(입력 실패 5회 시 잠금 처리)" minlength="5" maxlength="15"/>
+                      <!-- ↓ submit, button 모두 가능-->
+            <input type="submit" value="로그인" class="log-btn"/>
+        </form>
+        <div class="left">
+            <input type="button" value="회원가입"/>
+        </div>
+        <div class="right">
+            <a href="#">아이디/비밀번호 찾기</a>
+        </div>
+    </div>
+</body>
+</html>
